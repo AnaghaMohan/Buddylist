@@ -1,0 +1,49 @@
+:host /deep/ ng2-smart-table  {
+	font-size:16px;
+
+}
+.search{
+	width:100%;
+	height: 30px;
+}
+
+:host /deep/ ng2-smart-table thead > tr > th > div{
+	color:white;
+	background-color: #191970;
+	padding:2px;
+	margin-top:15px;
+	text-align:center;
+}
+:host /deep/ ng2-smart-table-title > a { 
+	text-align:center;
+	color:white;
+	background-color: #191970;
+	padding:5px;
+}
+ng2-smart-action ng2-smart-action-delete-delete{
+	color:white;
+	background-color: #191970;
+	padding:8px;
+	text-align:center;	
+}
+
+.ng2-smart-pagination{
+	border-color: #191970;
+	background-color: #191970;
+}
+
+:host /deep/ td.ng2-smart-actions a {
+	color:white;
+	background-color: #191970;
+	padding:5px;
+    text-align:center; }
+
+
+.pagination>li>a, .pagination>li>span{
+	border-color: #191970;
+	background-color: #191970;	
+}
+.pagination>.active>span{
+	border-color: #191970;
+	background-color: #191970;	
+}

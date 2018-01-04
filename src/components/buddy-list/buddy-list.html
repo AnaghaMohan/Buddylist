@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-12"><app-add-buddy-component (buddyAdded)="getBuddyList($event)"></app-add-buddy-component>
+</div>
+<ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="deleteModal.open($event)" (userRowSelect)="buddyModal.open($event)">
+</ng2-smart-table>
+<!--Displays detailed buddy info on click-->
+<modal #buddyModal (onOpen)="actionOnOpen($event)">
+    <modal-header> 
+        <h1>Buddy Details</h1>
+    </modal-header>
+    <modal-content >
+        <form>
+                <label>User Name</label>
+                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="buddyData.username" disabled="disabled">
+                <label>First Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="buddyData.firstname" disabled="disabled">
+                <label>Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="buddyData.lastname" disabled="disabled">
+                <label>Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="buddyData.phone" disabled="disabled">
+                <label>Status</label>
+                <input type="text" class="form-control" id="status" name="status" [(ngModel)]="buddyData.status" disabled="disabled">
+            <label>Email</label>
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="buddyData.email" disabled="disabled">
+            <label>About me</label>
+            <input type="text" class="form-control" id="about" name="about" [(ngModel)]="buddyData.about" disabled="disabled">
+            <label>Birthday</label>
+            <input type="text" class="form-control" id="birthday" name="birthday" [(ngModel)]="buddyData.birthday" disabled="disabled">
+            <div *ngIf="buddyData.status == 'Offline'">
+            <label>Last Seen</label>
+            <input type="text" class="form-control" id="lastseen" name="lastseen" [(ngModel)]="buddyData.lastseen" disabled="disabled">
+            </div>
+            <label>favorites</label>
+            <input type="number" class="form-control" id="favorites"  name="favorites" [(ngModel)]="buddyData.favorites" disabled="disabled">
+               </form>
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-primary" (click)="buddyModal.close()">close</button>
+    </modal-footer>
+</modal>
+
+<!--Deletes selected buddy data-->
+<modal #deleteModal (onOpen)="onDeleteModalOpen($event)">
+    <modal-header>
+        <h1>Remove Buddy</h1>
+    </modal-header>
+    <modal-content >
+        Are you sure you want to delete?
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-primary" (click)="deleteModal.close()">Cancel</button>
+        <button class="btn btn-primary" (click)="deleteUserData(); deleteModal.close();">Remove</button>
+    </modal-footer>
+</modal>

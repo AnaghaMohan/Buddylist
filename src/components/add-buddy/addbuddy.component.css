@@ -1,0 +1,28 @@
+
+h1{
+    text-align: center;
+    color: #2C75BE;
+}
+label{
+    color: #2C75BE;
+}
+p{
+    color: red;
+}
+.addbuddyform{
+    overflow:auto;
+}
+
+.addbtn{
+    background-color:#191970;
+    color:white;
+    padding:8px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+    
+    
