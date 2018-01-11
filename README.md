@@ -1,6 +1,6 @@
-Prerequisite:
-1.Node and npm should be installed(node>6 npm>3)<br/>
-2. Angular cli should be installed globally. : 'npm install -g @angular/cli'<br/>
+Prerequisite:<br/>
+1.Node and npm should be installed(node>6 and npm>3)<br/>
+2. Angular cli should be installed globally. : 'npm install -g @angular/cli' <br/>
 3. Install json server: 'npm install -g json-server' 
    
 1. In a new terminal give the path to the data folder inside the project Buddy
