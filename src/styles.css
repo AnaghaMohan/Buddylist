@@ -2,9 +2,15 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body{
-    /*background-image: url('../images/bgimage.jpg');*/
-    
-    height:660px;
-    background-color: #cccccc;
-    background-image: linear-gradient(white,lightcyan,lightpink);
+   
+    background:#cccccc linear-gradient(white,lightcyan,lightpink)fixed;
 }
+tbody{
+  cursor:pointer;}
+
+ng2-smart-table-pager{
+  float:right;
+  margin-right:30px;
+  }
+  
+  
