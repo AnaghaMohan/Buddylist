@@ -1,7 +1,7 @@
 Prerequisite:
-Node and npm should be installed
-Angular cli should be installed globally. : 'npm install -g @angular/cli'
-Install json server: 'npm install json-server' 
+1.Node and npm should be installed
+2. Angular cli should be installed globally. : 'npm install -g @angular/cli'
+3. Install json server: 'npm install json-server' 
    
 1. In a new terminal give the path to the data folder inside the project Buddy
 2. Start JSON server by running " json-server --watch data.json " on terminal.  
